@@ -1,0 +1,3 @@
+Q1 (Ans)--> Yes, ANSI SQL Standards recognize the DATE type in format of 'YYYY-MM-DD'.
+-----------------------------------------------------------------------------------------------
+Q2 (Ans)-->  DML (Data Manipulation Language) contains INSERT , DELETE & UPDATE Command 

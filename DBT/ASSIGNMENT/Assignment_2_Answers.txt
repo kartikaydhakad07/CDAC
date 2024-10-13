@@ -1,0 +1,14 @@
+Q1 (Ans)--> As Cnum which indicates Customer Number which is unique for each and every customer 
+	    So Cnum is primary key.
+
+-----------------------------------------------------------------------------------------------
+Q2 (Ans)--> 4th column in Customrs is Rating.
+
+-----------------------------------------------------------------------------------------------
+Q3 (Ans)--> Rows   :-Tuples
+	    Columns:-Attributes    	 
+
+-----------------------------------------------------------------------------------------------
+Q4 (Ans)--> We can not see first few rows of RDEBMS table because inserted data in not in sequential 
+	    manner to keep insertion operation simultaneous for multiple users, inserted row is 
+	    inserted between any free space of row. 

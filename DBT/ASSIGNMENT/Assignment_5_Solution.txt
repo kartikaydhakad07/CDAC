@@ -1,0 +1,48 @@
+1.
+mysql> select * from orders
+    -> where amt>1000;
++------+---------+------------+------+------+
+| Onum | Amt     | Odate      | Cnum | Snum |
++------+---------+------------+------+------+
+| 3002 | 1900.10 | 1990-10-03 | 2007 | 1004 |
+| 3005 | 5160.45 | 1990-10-03 | 2003 | 1002 |
+| 3006 | 1098.16 | 1990-10-03 | 2008 | 1007 |
+| 3009 | 1713.23 | 1990-10-04 | 2002 | 1003 |
+| 3008 | 4723.00 | 1990-10-05 | 2006 | 1001 |
+| 3010 | 1309.95 | 1990-10-06 | 2004 | 1002 |
+| 3011 | 9891.88 | 1990-10-06 | 2006 | 1001 |
++------+---------+------------+------+------+
+
+2.
+mysql> select sname, city from salespeople
+    -> where city='london' and comm>0.10;
++--------+--------+
+| sname  | city   |
++--------+--------+
+| Peel   | London |
+| Motika | London |
++--------+--------+
+
+3.
+mysql> select * from customers
+    -> where rating >100 and city ='Rome';
++------+----------+------+--------+------+
+| Cnum | Cname    | City | Rating | Snum |
++------+----------+------+--------+------+
+| 2002 | Giovanni | Rome |    200 | 1003 |
++------+----------+------+--------+------+
+
+4.
+it will print rows which contain amt greater than 1000 or rows except having date 1990-10-03 with cnum greater than 2003 
+
+5.
+it will print only those rows which contain amount greater than or equal to 1500 from rows which contains date 1990-10-03 or contain snum greater than 1006 (that are Onum : 3005 &3002)
+
+
+6.
+Select snum, sname, city, comm From Salespeople // covering all columns so we can use '*'             
+where (comm > .12 OR comm <.14); // this logic prints all value 
+   
+   
+Select * from Orders 
+where (amt < 1000 OR NOT(odate = ‘1990-10-03’AND cnum > 2003)); 
