@@ -1,42 +1,18 @@
+
 import java.util.Scanner;
-class CalcLeap{
 
-    int year;
-
-    public void ReadRecord(){
+public class LeapYear {
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Please enter the year : ");
-        this.year= sc.nextInt();
 
-    }
+        System.out.println("Please enter a year: ");
+        int a = sc.nextInt();
+        sc.close();
 
-    public void Calculate(){
-
-        if((year % 4 ==0) &&(year%100 != 0 || year % 400==0)){
-
-            System.out.println("thie given year "+year+" is Leap year");
-
+        if(a%4 == 0 && a%100 != 0 || (a%400 ==0) ){
+            System.out.println("its a leap year");
         }else{
-            System.out.println("thie given year "+year+" is NOT Leap year");
+            System.out.println("not a leap year");
         }
-    }
-
-
-}
-
-
-
-
-class LeapYear{
-    public static void main ( String Args[] ){
-
-        CalcLeap c = new CalcLeap();
-
-        c.ReadRecord();
-        c.Calculate();
-
-
-
-
     }
 }
